@@ -1,51 +1,54 @@
-*,*::before,*::after{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "product sans";
-    font-weight: normal;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "product sans";
+  font-weight: normal;
+  border-radius: 0;
 }
-body{
-   background: linear-gradient(to right,#0099ff , #00ff91); 
+body {
+  background: linear-gradient(to right, #0099ff, #00ff91);
 }
-.span-two{
-    background-color: crimson;
+.span-two {
+  background-color: crimson;
 }
-.cali-grid{
-    display: grid;
-    justify-content: center;
-    align-content: center;
-    min-height: 100vh;
-    grid-template-columns: repeat(4,100px);
-    grid-template-rows: minmax(120px, auto) repeat(5,100px);
+.cali-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
 }
-.cali-grid > button{
-    cursor: pointer;
-    font-size: 2rem;
-    border: 1px solid white;
-    outline: none;
-    background-color: rgba(255, 255, 255, 0.75)
+.cali-grid > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid white;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.75);
 }
-.cali-grid > button:hover{    
-    background-color: rgba(255, 255, 255, 0.9)
+.cali-grid > button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
 }
-.span-two{
-    grid-column: span 2 ;
+.span-two {
+  grid-column: span 2;
 }
-.outputscrn{
-    grid-column: 1/ -1;
-    background-color: rgba(0, 0, 0, 0.63);
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
-    flex-direction: column;
-    word-wrap: break-word;
-    word-wrap: break-all;
+.outputscrn {
+  grid-column: 1/ -1;
+  background-color: rgba(0, 0, 0, 0.63);
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  flex-direction: column;
+  word-wrap: break-word;
+  word-wrap: break-all;
 }
-.outputscrn .previous{
-    color: rgba(216, 216, 216, 0.75);
+.outputscrn .previous {
+  color: rgba(216, 216, 216, 0.75);
 }
 .outputscrn .current {
-    color: white;
-    font-size: 2.5rem;
+  color: white;
+  font-size: 2.5rem;
 }
