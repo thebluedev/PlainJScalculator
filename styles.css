@@ -1,3 +1,4 @@
+/* resetting stuff */
 *,
 *::before,
 *::after {
@@ -8,8 +9,13 @@
   font-weight: normal;
   border-radius: 0;
 }
-body {
-  background: linear-gradient(to right, #0099ff, #00ff91);
+body{
+  background: url(./light.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.darkbody{
+  background-image: url(./dark.jpg);
 }
 .span-two {
   background-color: crimson;
@@ -29,12 +35,10 @@ body {
   outline: none;
   background-color: rgba(255, 255, 255, 0.75);
 }
-.cali-grid > button:hover {
-  background-color: rgba(255, 255, 255, 0.9);
-}
 .span-two {
   grid-column: span 2;
 }
+/* output screen styles */
 .outputscrn {
   grid-column: 1/ -1;
   background-color: rgba(0, 0, 0, 0.63);
@@ -51,4 +55,68 @@ body {
 .outputscrn .current {
   color: white;
   font-size: 2.5rem;
+}
+/* effect for calci */
+.cali-grid > button {
+  color: hsl(222, 25%, 14%);
+  transition: color 0.25s ease-in-out, transform 0.25s ease-in-out;
+}
+
+.cali-grid > button:hover {
+  transform: scale(1.05);
+  color: hsl(234, 89%, 51%);
+}
+
+.cali-grid > button:active {
+  transform: scale(0.9);
+}
+/* dark mode for calculator */
+.dark > button {
+  border: 1px solid rgba(0, 0, 0, 0.411);
+  background-color: rgba(0, 0, 0, 0.836);
+  color: hsl(0, 0%, 100%);
+  transition: color 0.25s ease-in-out, transform 0.25s ease-in-out;
+}
+
+.dark > button:hover {
+  transform: scale(1.05);
+  color: hsl(234, 100%, 70%);
+  background-color: rgba(0, 0, 0, 0.7);
+  border: none;
+}
+
+.dark > button:active {
+  transform: scale(0.9);
+}
+/* Button at top to toggle dark mode */
+.drkbtn {
+  position: absolute;
+  right: 0;
+  margin: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  border: 1px solid white;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 10px;
+  border-radius: 10px;
+}
+.drkbtn:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.btndarkmode {
+  border: 1px solid rgb(31, 31, 31);
+  background-color: rgba(0, 0, 0, 0.555);
+  color: hsl(0, 0%, 100%);
+  transition: color 0.25s ease-in-out, transform 0.25s ease-in-out;
+}
+.btndarkmode:hover{
+  transform: scale(1.2);
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.btndarkmode:active {
+  transform: scale(1);
+}
+.blur{
+  filter: blur(1.5rem);
 }

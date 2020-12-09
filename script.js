@@ -63,21 +63,21 @@ class Calculator {
         maximumFractionDigits: 0,
       });
     }
-    if(decimalNums != null){
-        return `${intergerDisplay}.${decimalNums}`
+    if (decimalNums != null) {
+      return `${intergerDisplay}.${decimalNums}`;
     }
     if (isNaN(floatNumber)) return "";
     return floatNumber.toLocaleString("en");
   }
   updateDisplay() {
-    if(this.currValText.length > 16 )return
+    if (this.currValText.length > 16) return;
     this.currValText.innerText = this.getDisplayNumber(this.currentOperand);
     if (this.operation != null) {
       this.preValText.innerText = `${this.getDisplayNumber(
         this.previousOperand
       )}${this.operation}`;
     } else {
-        this.preValText.innerText = ""
+      this.preValText.innerText = "";
     }
   }
 }
@@ -116,4 +116,12 @@ deleteButton.addEventListener("click", () => {
   calculator.updateDisplay();
 });
 
-document.querySelector("button").classList.toggle("dark")
+function toggleDarkMode() {
+  document.querySelector(".cali-grid").classList.toggle("dark");
+  document.querySelector(".drkbtn").classList.toggle("btndarkmode");
+  document.querySelector("body").classList.toggle("darkbody");
+
+}
+var darkBtn = document
+  .querySelector(".drkbtn")
+  .addEventListener("click", toggleDarkMode);
