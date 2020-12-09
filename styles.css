@@ -72,16 +72,16 @@ body{
 }
 /* dark mode for calculator */
 .dark > button {
-  border: 1px solid rgba(0, 0, 0, 0.411);
+  border: 1px solid rgb(100, 100, 100);
   background-color: rgba(0, 0, 0, 0.836);
   color: hsl(0, 0%, 100%);
-  transition: color 0.25s ease-in-out, transform 0.25s ease-in-out;
+  transition: color 0.1s ease-in-out, transform 0.1s ease-in-out;
 }
 
 .dark > button:hover {
   transform: scale(1.05);
   color: hsl(234, 100%, 70%);
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(65, 65, 65, 0.822);
   border: none;
 }
 
